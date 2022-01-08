@@ -1,0 +1,121 @@
+﻿<UserControl x:Class="INF11207_TP3_Jeu_de_Pokemons.Views.LancementCombat"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:control="clr-namespace:INF11207_TP3_Jeu_de_Pokemons.Views.UserControls"
+        mc:Ignorable="d"
+        
+        d:DesignHeight="500" d:DesignWidth="800" IsVisibleChanged="UserControl_IsVisibleChanged">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label 
+            Content="Lancer un nouveau combat"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Grid.ColumnSpan="2"
+            Grid.Column="0"
+            Grid.Row="2"
+            FontSize="30"/>
+
+
+
+        <StackPanel
+            Orientation="Horizontal"
+            Grid.ColumnSpan="2"
+            Grid.Row="4"
+            HorizontalAlignment="Center">
+
+            <Button
+                Content="Lancer un combat"
+                Height="50"
+                Padding="20,0,20,0"
+                Margin="10,0,0,0"
+                FontSize="15"
+                Command="{Binding CommandeLancer}"/>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*"/>
+                <RowDefinition Height="245*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Adeversaire"  Grid.Column="0" Grid.Row="0" />
+            <TextBox Grid.Column="0" Grid.Row="0" Margin="71,5,150,5" VerticalContentAlignment="Center" Text="{Binding AddedIdInvitation, UpdateSourceTrigger=PropertyChanged}" Grid.ColumnSpan="2" />
+            <Label Content="Mise"  Grid.Column="1" Grid.Row="0" />
+            <TextBox Grid.Column="1" Grid.Row="0" Margin="61,5,1,5" VerticalContentAlignment="Center" Text="{Binding AddMoney, UpdateSourceTrigger=PropertyChanged}" />
+            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="2" Margin="5,5,5,5" Command="{Binding AddInvitationCommand}">
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock Text=" Ajouter" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+
+            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Row="0" Grid.Column="3" Margin="5,5,5,5" Command="{Binding SyncInvitationCommand}">
+                <StackPanel Orientation="Horizontal">
+
+                    <TextBlock Text=" Synchroniser" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+
+            <DataGrid Margin="5,5,5,5" ItemsSource="{Binding Invitations, NotifyOnSourceUpdated=True}" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" SelectedItem="{Binding SelectedInvitation}" Grid.ColumnSpan="4" Grid.Row="1">
+
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="InvitationId" Width="*" Binding="{Binding InvitationId}" />
+                    <DataGridTextColumn Header="Money" Width="*" Binding="{Binding Money}" />
+                    <DataGridTextColumn Header="Status" Width="*" Binding="{Binding Status}" />
+                    <DataGridTextColumn Header="Player Emitter" Width="*" Binding="{Binding PlayerEmitterId}" />
+                    <DataGridTextColumn Header="Player Received" Width="*" Binding="{Binding PlayerReceiverId}" />
+                    <DataGridTemplateColumn Header="Refuser" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding Path=DataContext.RefuseCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="Refuser" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Accepter" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding Path=DataContext.AccepteCommand, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}">
+                                    <StackPanel Orientation="Horizontal">
+
+                                        <TextBlock Text="Accepter" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn Header="Terminer" Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Command="{Binding Path=DataContext.CommandeTerminer, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}}">
+                                    <StackPanel Orientation="Horizontal">
+
+                                        <TextBlock Text="Terminer" VerticalAlignment="Center" />
+                                    </StackPanel>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </Grid>
+    </Grid>
+</UserControl>

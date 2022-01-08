@@ -1,0 +1,123 @@
+﻿<UserControl x:Class="INF11207_TP3_Jeu_de_Pokemons.Views.CreationJoueur"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        
+        d:DesignHeight="450" d:DesignWidth="600">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="0.5*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*" />
+            <ColumnDefinition Width="0.6*" />
+        </Grid.ColumnDefinitions>
+
+        <Label 
+            Content="Créez votre personnage"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Grid.ColumnSpan="2"
+            Grid.Column="0"
+            Grid.Row="0"
+            FontSize="30"/>
+
+        <Label 
+            Content="Prénom:"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right"
+            Margin="0,0,50,0"
+            Grid.Column="0"
+            Grid.Row="1"
+            FontSize="15" />
+
+        <TextBox 
+            Height="25"
+            Margin="0,0,130,0"
+            Grid.Column="1"
+            Grid.Row="1"
+            Text="{Binding Dresseur.FirstName, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label 
+            Content="Nom:"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right"
+            Margin="0,0,50,0"
+            Grid.Column="0"
+            Grid.Row="2"
+            FontSize="15" />
+
+        <TextBox 
+            Height="25"
+            Margin="0,0,130,0"
+            Grid.Column="1"
+            Grid.Row="2"
+            Text="{Binding Dresseur.Name, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label 
+            Content="Âge:"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Right"
+            Margin="0,0,50,0"
+            Grid.Column="0"
+            Grid.Row="3"
+            FontSize="15" />
+
+        <TextBox 
+            HorizontalAlignment="Left"
+            Height="25"
+            Width="100"
+            Grid.Column="1"
+            Grid.Row="3"
+            PreviewTextInput="VerifierSiEntreeEstNombre"
+            Text="{Binding Dresseur.Age, UpdateSourceTrigger=PropertyChanged}"/>
+
+        <Label 
+            Content="Vous débuterez la partie avec 5000$"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            Grid.ColumnSpan="2"
+            Grid.Column="0"
+            Grid.Row="4"
+            FontSize="15"/>
+
+        <Grid
+            Grid.ColumnSpan="2"
+            Grid.Column="0"
+            Grid.Row="5">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button
+                Content="Créer"
+                HorizontalAlignment="Right"
+                Grid.Column="0"
+                Height="50"
+                MinWidth="120"
+                Margin="0,0,30,20"
+                FontSize="20"
+                Command="{Binding CommandeCreerJoueur}"/>
+
+            <Button
+                Content="Annuler"
+                HorizontalAlignment="Left"
+                Grid.Column="1"
+                Height="50"
+                MinWidth="120"
+                Margin="30,0,0,20"
+                FontSize="20"
+                Command="{Binding CommandeAnnuler}"/>
+        </Grid>
+    </Grid>
+</UserControl>

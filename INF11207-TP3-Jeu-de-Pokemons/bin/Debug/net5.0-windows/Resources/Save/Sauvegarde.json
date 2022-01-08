@@ -1,0 +1,122 @@
+{
+  "FirstName": "kl",
+  "Name": "kl;",
+  "Age": 18,
+  "PrintMoney": "5100$",
+  "Depot": {
+    "PokemonsAchetes": [
+      {
+        "Id": 1,
+        "Types": [
+          "Poison",
+          "Grass"
+        ],
+        "PrintTypes": "Poison, Grass",
+        "Evolue": true,
+        "EvolutionId": 0,
+        "Evolution": {
+          "Level": 16,
+          "To": "Ivysaur",
+          "Id": 0
+        },
+        "Description": "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.  Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.",
+        "ATK": 1,
+        "DEF": 1,
+        "Price": 100,
+        "PrintPrice": "100$",
+        "Health": 45,
+        "HpGauge": {
+          "Value": 45,
+          "MaxValue": 45
+        },
+        "Image": "/Resources/Images/1.png",
+        "Attacks": [
+          {
+            "eff": null,
+            "AttaqueId": 0,
+            "Type": "Grass",
+            "Name": "Vine Whip",
+            "Damage": 5.4,
+            "Id": 0,
+            "Pokemon": null
+          },
+          {
+            "eff": null,
+            "AttaqueId": 0,
+            "Type": "Normal",
+            "Name": "Tackle",
+            "Damage": 5.45,
+            "Id": 0,
+            "Pokemon": null
+          },
+          {
+            "eff": null,
+            "AttaqueId": 0,
+            "Type": "Poison",
+            "Name": "Sludge Bomb",
+            "Damage": 10.6,
+            "Id": 0,
+            "Pokemon": null
+          },
+          {
+            "eff": null,
+            "AttaqueId": 0,
+            "Type": "Grass",
+            "Name": "Seed Bomb",
+            "Damage": 8.35,
+            "Id": 0,
+            "Pokemon": null
+          },
+          {
+            "eff": null,
+            "AttaqueId": 0,
+            "Type": "Grass",
+            "Name": "Power Whip",
+            "Damage": 12.5,
+            "Id": 0,
+            "Pokemon": null
+          }
+        ],
+        "Achete": true,
+        "Equipe": true,
+        "Emplacement": 0,
+        "IdPokemonAchete": "0f8fad5b-d9cb-469f-a165-70867728950e",
+        "Name": "Bulbasaur",
+        "Level": 1,
+        "XpGauge": {
+          "Value": 50,
+          "MaxValue": 100
+        }
+      }
+    ],
+    "IndexPokemonsEquipes": [
+      0,
+      -1,
+      -1
+    ]
+  },
+  "Level": 1,
+  "XpGauge": {
+    "Value": 50,
+    "MaxValue": 100
+  },
+  "Guide": {
+    "IdPokemonsDebloques": [
+      1
+    ]
+  },
+  "Statistiques": {
+    "MontantAccumule": 5200,
+    "MontantDepense": 100,
+    "PokemonsAchetes": 1,
+    "PokemonsDebloques": 1,
+    "CombatsTotal": 1,
+    "CombatsGagnes": 1,
+    "CombatsPerdus": 0,
+    "PrintMontantAccumule": "5200$",
+    "PrintMontantDepense": "100$"
+  },
+  "Invitations": [],
+  "Money": 5100,
+  "IsValid": true
+}

@@ -1,0 +1,20 @@
+﻿INF11207-TP3-Jeu-de-Pokemons
+
+
+winexe
+C#
+.cs
+C:\Users\xrago\OneDrive\سطح المكتب\INF11207-TP3-Jeu-de-Pokemons-master\INF11207-TP3-Jeu-de-Pokemons\obj\Debug\net5.0-windows\
+INF11207_TP3_Jeu_de_Pokemons
+none
+false
+TRACE;DEBUG;NET;NET5_0;NETCOREAPP
+C:\Users\xrago\OneDrive\سطح المكتب\INF11207-TP3-Jeu-de-Pokemons-master\INF11207-TP3-Jeu-de-Pokemons\App.xaml
+21925530364
+156-1379672362
+76-1923634436
+2141389586631
+Views\Accueil.xaml;Views\ChoixAttaque.xaml;Views\ChoixEmplacement.xaml;Views\Combats.xaml;Views\CreationJoueur.xaml;Views\DeckWin.xaml;Views\Inventaire.xaml;Views\Joueur.xaml;Views\LancementCombat.xaml;Views\MainWindow.xaml;Views\Pokemons.xaml;Views\Statistiques.xaml;Views\UserControls\ActionsPokemon.xaml;Views\UserControls\ActionsPokemonDebloque.xaml;Views\UserControls\AttaqueCondense.xaml;Views\UserControls\JaugeVie.xaml;Views\UserControls\JaugeXp.xaml;Views\UserControls\Menu.xaml;Views\UserControls\PokemonCombat.xaml;Views\UserControls\PokemonDetails.xaml;Views\UserControls\PokemonSimple.xaml;
+
+False
+

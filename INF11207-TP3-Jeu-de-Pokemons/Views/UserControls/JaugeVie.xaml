@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="INF11207_TP3_Jeu_de_Pokemons.Views.UserControls.JaugeVie"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             
+             d:DesignHeight="50" d:DesignWidth="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"/>
+            <ColumnDefinition Width="0.7*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Orientation="Horizontal">
+            <Label
+                Content="HP:"
+                VerticalAlignment="Center"
+                FontSize="15"/>
+
+            <Label
+                Content="{Binding Value}"
+                VerticalAlignment="Center"
+                FontSize="15"/>
+        </StackPanel>
+
+        <ProgressBar 
+            Grid.Column="1"
+            Margin="0,10,10,10"
+            Minimum="0"
+            Maximum="{Binding MaxValue}"
+            Value="{Binding Value}"/>
+    </Grid>
+</UserControl>
